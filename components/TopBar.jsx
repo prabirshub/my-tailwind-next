@@ -3,7 +3,7 @@ import { BsChatSquareDots } from 'react-icons/bs'
 
 const TopBar = () => {
   return (
-    <div className='sticky top-0 left-0 flex justify-between items-center px-4 py-2 bg-white'>
+    <div className='sticky top-0 left-0 flex justify-between items-center px-4 py-2 bg-white z-30'>
       <div className='flex items-center gap-2'>
         <BsChatSquareDots size={30} className='text-[var(--primary-dark)]' />
         <h1 className='uppercase text-xl font-bold text-gray-700'>weekway</h1>

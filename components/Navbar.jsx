@@ -27,7 +27,7 @@ const Navbar = () => {
     setNav(!nav)
   }
   return (
-    <div className='w-full min-h-[50px] flex justify-between items-center fixed z-10 text-white bg-gray-700/80'>
+    <div className='w-full min-h-[50px] flex justify-between items-center fixed z-30 text-white bg-gray-700/80'>
       <ul className='hidden sm:flex px-4'>
         {navLinks.map((item) => (
           <li key={item.label}>
@@ -36,13 +36,22 @@ const Navbar = () => {
         ))}
       </ul>
       <div className='flex justify-between'>
-        <FaFacebookF className='mx-4' />
-        <FaTwitter className='mx-4' />
-        <FaGooglePlusG className='mx-4' />
-        <FaInstagram className='mx-4' />
+        <Link href='#'>
+          <FaFacebookF className='mx-4' />
+        </Link>
+        <Link href='#'>
+          <FaTwitter className='mx-4' />
+        </Link>
+        <Link href='#'>
+          <FaGooglePlusG className='mx-4' />
+        </Link>
+        <Link href='#'>
+          <FaInstagram className='mx-4' />
+        </Link>
       </div>
+
       {/* Hamburger icon */}
-      <div onClick={handleNav} className='sm:hidden z-10'>
+      <div onClick={handleNav} className='sm:hidden z-30'>
         {!nav ? (
           <FaBars size={20} className='mr-4 cursor-pointer' />
         ) : (
@@ -54,8 +63,8 @@ const Navbar = () => {
         onClick={handleNav}
         className={
           nav
-            ? 'overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex flex-col'
-            : 'absolute top-0 h-screen left-[-100%] transition-all ease-in duration-500'
+            ? 'overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-[50px] w-full h-[calc(100vh-50px)] bg-black/90 px-4 py-7 flex flex-col z-20'
+            : 'absolute top-[50px] h-[calc(100vh-50px)] left-[-100%] transition-all ease-in duration-500 z-20'
         }
       >
         <ul className='h-full w-full text-center pt-12'>
